@@ -1,7 +1,11 @@
 :root {
     --bg-color: hsl(49 37% 94%);
-    --typewriterSpeed: 2s;
+    --typewriterSpeed1: 2s;
+    --typewriterSpeed2: 7s;
     --typewriterCharacters: 24;
+
+    --typewriterLine1Char : 5;
+    --typewriterLine2Char : 16;
   }
   
 * {
@@ -27,6 +31,7 @@ text-align: center;
 position: relative;
 margin-left: auto;
 margin-right: auto;
+margin-bottom: 0px;
 max-width: max-content;
 
 }
@@ -43,17 +48,59 @@ left: 0;
 
 .header::before {
 background: var(--bg-color);
-animation: typewriter var(--typewriterSpeed)
-    steps(var(--typewriterCharacters)) 1s forwards;
+animation: typewriter var(--typewriterSpeed1)
+    steps(var(--typewriterLine1Char)) 1s forwards;
 
 }
 
 .header::after {
 width: 0.125em;
 background: black;
-animation: typewriter var(--typewriterSpeed)
-    steps(var(--typewriterCharacters)) 1s forwards,
-    blink 750ms steps(var(--typewriterCharacters)) infinite;
+animation: typewriter var(--typewriterSpeed1)
+    steps(var(--typewriterLine1Char)) 1s forwards,
+    blink 750ms steps(var(--typewriterLine1Char)) 26.7 forwards,
+    fadeOut var(--typewriterSpeed1) 2s forwards;
+    
+}
+
+.header1 {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    font-family: "Source Code Pro", monospace;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    max-width: max-content;
+    
+    }
+    
+.header1::before,
+.header1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    }
+
+.header1::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed2)
+        steps(var(--typewriterCharacters)) 3s forwards;
+
+    }
+
+.header1::after {
+    width: 0.125em;
+    background: black;
+    opacity: 0;
+    animation: typewriter var(--typewriterSpeed2)
+        steps(var(--typewriterCharacters)) 3s forwards,
+        blink 750ms steps(var(--typewriterCharacters)) 3s infinite,
+        fadeIn 0.5s 3s forwards;
+        
 }
 
 .subtitle {
@@ -75,6 +122,24 @@ to {
 to {
     background: transparent;
 }
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0.8;
+    }
+    100%{
+       opacity: 1;
+   }
 }
 
 @keyframes fadeInUp {
