@@ -1,11 +1,11 @@
 :root {
     --bg-color: hsl(49 37% 94%);
     --typewriterSpeed1: 2s;
-    --typewriterSpeed2: 7s;
+    --typewriterSpeed2: 5s;
     --typewriterCharacters: 24;
 
-    --typewriterLine1Char : 5;
-    --typewriterLine2Char : 16;
+    --typewriterLine1Char : 6;
+    --typewriterLine2Char : 18;
   }
   
 * {
@@ -59,7 +59,7 @@ background: black;
 animation: typewriter var(--typewriterSpeed1)
     steps(var(--typewriterLine1Char)) 1s forwards,
     blink 750ms steps(var(--typewriterLine1Char)) 26.7 forwards,
-    fadeOut var(--typewriterSpeed1) 2s forwards;
+    fadeOut 0.01s calc(var(--typewriterSpeed1) + 1s)  forwards;
     
 }
 
@@ -125,7 +125,10 @@ to {
 }
 
 @keyframes fadeOut {
-    100% {
+    0% {
+        opacity: 0;
+    }
+    100%{
         opacity: 0;
     }
 }
