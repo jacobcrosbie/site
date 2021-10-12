@@ -1,6 +1,6 @@
 :root {
     --bg-color: hsl(49 37% 94%);
-    --typewriterSpeed: 6s;
+    --typewriterSpeed: 2s;
     --typewriterCharacters: 24;
   }
   
@@ -13,7 +13,7 @@ html{
 }
 
 .body {
-margin: 0;
+margin: 10px;
 min-height: 100vh;
 background: var(--bg-color);
 }
@@ -24,10 +24,15 @@ background: var(--bg-color);
 font-size: clamp(1rem, 3vw + 1rem, 4rem);
 font-family: "Source Code Pro", monospace;
 text-align: center;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+max-width: max-content;
+
 }
 
-h1::before,
-h1::after {
+.header::before,
+.header::after {
 content: "";
 position: absolute;
 top: 0;
@@ -36,13 +41,14 @@ bottom: 0;
 left: 0;
 }
 
-h1::before {
+.header::before {
 background: var(--bg-color);
 animation: typewriter var(--typewriterSpeed)
     steps(var(--typewriterCharacters)) 1s forwards;
+
 }
 
-h1::after {
+.header::after {
 width: 0.125em;
 background: black;
 animation: typewriter var(--typewriterSpeed)
