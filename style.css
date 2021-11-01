@@ -51,6 +51,7 @@ margin-left: auto;
 margin-right: auto;
 margin-bottom: 0px;
 max-width: max-content;
+color: #FFFFFF;
 }
 
 .header::before,
@@ -64,7 +65,7 @@ left: 0;
 }
 
 .header::before {
-background: white;
+background: #121010;
 animation: typewriter var(--typewriterSpeed1)
     steps(var(--typewriterLine1Char)) 1s forwards;
 
@@ -72,7 +73,7 @@ animation: typewriter var(--typewriterSpeed1)
 
 .header::after {
 width: 0.125em;
-background: black;
+background: white;
 animation: typewriter var(--typewriterSpeed1)
     steps(var(--typewriterLine1Char)) 1s forwards,
     blink 750ms steps(var(--typewriterLine1Char)) 26.7 forwards,
@@ -192,4 +193,22 @@ a:visited{
 a:hover{
     font-weight: bolder;
     background-color: red;
+}
+
+.background{
+    background: linear-gradient(180deg, #121010 26.04%, rgba(18, 16, 16,0.989426) 53.12%, rgba(18, 16, 16, 0.57) 89.58%), 
+                url(assets/physics-equations-on-chalkboard.jpg);
+    
+                max-width: 100%;
+    height: 100vh;
+    margin: 0px
+
+    
+}
+
+.about {
+    background: #F0F0F0;
+    max-width: 100%;
+    height: 50vh;
+
 }
