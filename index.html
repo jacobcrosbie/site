@@ -11,8 +11,19 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
-<body>
- 
+<body  data-spy="scroll" data-target="#navbar-example">
+
+<nav id="navbar-example" class="navbar fixed-top" style="place-content: center; background: #121010;">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#about">ABOUT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#blog">BLOG</a>
+    </li>
+  </ul>
+</nav>
+
 <section class="container-fluid background">
   <br>
   <br>
@@ -22,15 +33,42 @@
     Hello!
     My name name is Jacob. 
   </div>
-  <div style="color: white; text-align: center;">Welcome to my site!</div>
-
-  <nav>
-
-  </nav>
-</section class="about">
-Hello
-<section>
-
+  <div style="color: white; text-align: center;">
+    Welcome to my site!
+  </div>
 </section>
+
+
+<section id="about" class="container-fluid about">
+  <div class="section-title">
+    ABOUT
+  </div>
+  <div class="about-desc">
+    I’m from a physics background but I have now entered the world of software engineering.
+  </div>
+  <div class="about-desc">
+    I will share what I learn on this page so you can join me on my journey!
+  </div>
+</section>
+
+
+
+<section id="blog" class="container-fluid blog">
+  <div class="section-title" style="color: #F0F0F0;">
+    BLOG
+  </div>
+  <div class="container">
+    <div class="row" style="height: 25vh;">
+      <div class="col-md-4 card"></div>
+      <div class="col-md-4 card"></div>
+      <div class="col-md-4 card"></div>
+    </div>
+  </div>
+  
+  <br>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+  
+
 </body>
 </html>
