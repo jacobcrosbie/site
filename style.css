@@ -166,7 +166,7 @@ to {
 
 
 .background{
-    background: linear-gradient(180deg, #121010 26.04%, rgba(18, 16, 16,0.989426) 53.12%, rgba(18, 16, 16, 0.57) 89.58%), 
+    background: linear-gradient(180deg, #121010 26.04%, rgba(18, 16, 16,0.989426) 40.12%, rgba(18, 16, 16, 0.57) 89.58%), 
                 url(assets/physics-equations-on-chalkboard.jpg);
     
                 max-width: 100%;
