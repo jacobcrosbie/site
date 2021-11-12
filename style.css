@@ -201,18 +201,35 @@ to {
     color: white;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 840px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1{
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
 .card1 {
     background: white;
     max-width: 30ch;
     border-radius: 20px;
-    margin: auto;
+    margin: 10px;
   }
   
 .card1-img {
     display: inline-block;
     padding: 10rem 0rem 0rem;
     border-radius: 20px;
-    background-image: url(https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNjcwNjY3NQ&ixlib=rb-1.2.1&q=85);
     background-size: cover;
     overflow: hidden;
     margin: 1rem;
