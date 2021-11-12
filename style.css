@@ -9,7 +9,7 @@
     --typewriterLine2Char : 18;
   }
   
-* {
+*,*::after,*::beforez {
 box-sizing: border-box;
 }
 
@@ -17,25 +17,6 @@ html{
     scroll-behavior: smooth;
     font-family: "Source Sans Pro", sans-serif;
 }
-
-.body {
-min-height: 100vh;
-background: var(--bg-color);
-max-width: 600px;
-margin-left: auto;
-margin-right: auto;
-}
-
-
-.card {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
-    background: white;
-}
-
 
 .header {
 font-size: clamp(1rem, 3vw + 1rem, 4rem);
@@ -178,7 +159,6 @@ to {
 
 .about {
     position: relative;
-    overflow-y: scroll;
     background: #F0F0F0;
     max-width: 100%;
     height: fit-content;
@@ -210,28 +190,58 @@ to {
 
 .blog {
     position: relative;
-    overflow-y: scroll;
     background: #121010;
     max-width: 100%;
-    height: fit-content;
+    height: 100vh;
 }
 
-.container{
-    place-content: center;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-
-
-.card{
-    margin: 10px;
-    height: 20vh;
-    border-radius: 20px;
-}
 
 .nav-pills .nav-link.active,.nav-pills .show>.nav-link{color:#000000;background-color:#ffffff}
 .nav-link{
     color: white;
 }
+
+.card1 {
+    background: white;
+    max-width: 30ch;
+    border-radius: 20px;
+    margin: auto;
+  }
+  
+.card1-img {
+    display: inline-block;
+    padding: 10rem 0rem 0rem;
+    border-radius: 20px;
+    background-image: url(https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNjcwNjY3NQ&ixlib=rb-1.2.1&q=85);
+    background-size: cover;
+    overflow: hidden;
+    margin: 1rem;
+}
+  
+.card1_content {
+    padding: 0rem 1rem;
+    background: black;
+    opacity: 0.85;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    bottom: -1rem;
+    transform: translatey(70%);
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.card1_title { 
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.card1_body {
+    color: white;
+    padding: 0.5rem 0rem 2rem 0rem;
+}
+
+.card1:hover .card1_content {
+    transform: translatex(0%);
+} 
