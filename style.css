@@ -192,7 +192,7 @@ to {
     position: relative;
     background: #121010;
     max-width: 100%;
-    height: fit-content + 50vh;
+    height: fit-content;
 }
 
 
